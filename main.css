@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --main-color: rgb(231, 158, 0);
+}
+
+/*Header*/
+
+header #mobile-menu
+{
+    position: fixed;
+    top: 0px;
+    padding: 20px;
+    background-color: var(--main-color);
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+header nav
+{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    align-items: baseline;
+}
+header #mobile-menu li
+{
+    padding-bottom: 20px;
+}
+header #mobile-menu li a
+{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+header #mobile-menu li a:hover
+{
+    color: black;
+}
+header li a
+{
+    color: black;
+    font-size: 19px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+header li a:hover
+{
+    transition: 0.4s;
+    color: var(--main-color);
+}
+nav div a
+{
+    color: black;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+nav #mobile-button
+{
+    width: 25px;
+    height: 25px;
+}
+nav #nav-menu
+{
+    width: 40%;
+    display: none;
+    list-style: none;
+    justify-content: space-between;
+}
+
+/*Main Content*/
+
+main
+{
+    padding: 200px 20px 20px;
+}
+
+main section{
+    margin-bottom: 200px;
+}
+main #header-section
+{
+    height: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    text-align: center;
+}
+main #header-section h1
+{
+    font-size: 28px;
+}
+main #header-section h2
+{
+    font-size: 18px;
+}
+
+/*Breakpoints*/
+
+@media(min-width:467px){
+    main
+    {
+        padding-top: 220px;
+    }
+    main section
+    {
+        margin-bottom: 220px;
+    }
+    main #header-section h1
+    {
+        font-size: 38px;
+    }
+    main #header-section h2
+    {
+        font-size: 28px;
+    }
+}
+
+@media(min-width:1000px){
+    main
+    {
+        padding-top: 250px;
+    }
+    main section
+    {
+        margin-bottom: 250px;
+    }
+    main #header-section h1
+    {
+        font-size: 50px;
+    }
+    main #header-section h2
+    {
+        font-size: 40px;
+    }
+
+    /*Header Menu*/
+
+    header nav{
+        justify-content: space-around;
+    }
+    nav #mobile-button{
+        display: none;
+    }
+    header nav #nav-menu{
+        display: flex;
+    }
+}
