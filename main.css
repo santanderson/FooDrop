@@ -6,7 +6,7 @@
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --main-color: rgb(231, 158, 0);
+    --main-color: rgb(243, 138, 0);
 }
 
 /*Header*/
@@ -49,19 +49,14 @@ header #mobile-menu li a:hover
 }
 header li a
 {
-    color: black;
-    font-size: 19px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
     text-decoration: none;
-    transition: 0.4s;
-}
-header li a:hover
-{
-    transition: 0.4s;
-    color: var(--main-color);
 }
 nav div a
 {
-    color: black;
+    color: var(--main-color);
     font-size: 35px;
     font-weight: 800;
     letter-spacing: 2px;
@@ -69,8 +64,12 @@ nav div a
 }
 nav #mobile-button
 {
-    width: 25px;
-    height: 25px;
+    background:transparent;
+    color: white;
+    font-size: 20px;
+    border: none;
+    width: 30px;
+    height: 30px;
 }
 nav #nav-menu
 {
@@ -82,42 +81,78 @@ nav #nav-menu
 
 /*Main Content*/
 
-main
+main section
 {
-    padding: 200px 20px 20px;
-}
-
-main section{
-    margin-bottom: 200px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
 }
 main #header-section
 {
-    height: 150px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     text-align: center;
+    height: 600px;
+    padding: 200px 0px;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./assets//hamburger.jpg);
+    background-position-y: 50%;
+    background-attachment: fixed;
+}
+main section h1
+{
+    color: var(--main-color);
+    font-size: 30px;
 }
 main #header-section h1
 {
-    font-size: 28px;
+    color: white;
 }
 main #header-section h2
 {
-    font-size: 18px;
+    color: yellow;
+    font-size: 20px;
+}
+main section .content
+{
+    font-size: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    height: 170px;
+}
+main section .img
+{
+    width: 100%;
+    height: 140px;
+    background-position: center;
+}
+
+main section #img-section-2{
+    background-image: url(./assets/pizza2.jpg);
+}
+
+main section #img-section-3{
+    background-image: url(./assets/burger2.jpg);
 }
 
 /*Breakpoints*/
 
+@media(min-width:420px){
+    main section .img
+    {
+        width: 90%;
+        height: 200px;
+    }
+}
+
 @media(min-width:467px){
-    main
-    {
-        padding-top: 220px;
-    }
-    main section
-    {
-        margin-bottom: 220px;
-    }
     main #header-section h1
     {
         font-size: 38px;
@@ -128,14 +163,36 @@ main #header-section h2
     }
 }
 
-@media(min-width:1000px){
-    main
+@media(min-width:600px){
+    main section .img
     {
-        padding-top: 250px;
+        height: 300px;
+        width: 600px;
     }
+}
+
+@media(min-width:1000px){
     main section
     {
-        margin-bottom: 250px;
+        padding: 40px;
+        flex-flow: row nowrap;
+    }
+    main section .content
+    {
+        justify-content: space-between;
+        height: 100%;
+        font-size: 25px;
+        width: 50%;
+        padding: 0px 50px;
+    }
+    main section .img
+    {
+        height: 93%;
+        width: 50%;
+    }
+    main #header-section
+    {
+        height:700px;
     }
     main #header-section h1
     {
