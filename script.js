@@ -3,22 +3,21 @@ const mobileMenu = document.getElementById('mobile-menu');
 const navBar = document.getElementById('navbar');
 const logo = navBar.children[0].children[0];
 const navLists = navBar.children[2].children;
-let isOpen = false;
+let isOpen = true;
 
 mobileButton.addEventListener('click', showMenu);
 window.addEventListener('scroll', changeNavColor);
 
 function showMenu(){
-    if(!isOpen){
+    if(isOpen){
         mobileMenu.style.display = 'flex';
         mobileButton.style.color = 'white'
-        logo.style.color = 'white';
-        isOpen = true;
-    }else if(isOpen){
+        logo.style.color = 'rgb(243, 138, 0)';
+        isOpen = false;
+    }else if(!isOpen){
         mobileMenu.style.display = 'none';
         mobileButton.style.color = 'rgb(243, 138, 0)';
-        logo.style.color = 'rgb(243, 138, 0)'
-        isOpen = false;
+        isOpen = true;
     }
 }
 
