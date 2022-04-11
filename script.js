@@ -25,7 +25,7 @@ function showMenu(){
 function changeNavColor(){
     let posy = window.pageYOffset;
     let buttonColor = posy >=550? 'rgb(243, 138, 0)': 'white';
-    let color = posy >= 630? 'black': 'white';
+    let color = posy >= 630? 'rgb(107, 29, 29)': 'white';
 
     mobileButton.style.color = buttonColor;
     navLists[0].children[0].style.color = color;
